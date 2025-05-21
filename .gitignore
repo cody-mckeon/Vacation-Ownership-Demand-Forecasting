@@ -14,6 +14,10 @@ data/processed/
 # Track DVC metadata directory
 !.dvc/
 
+# Track DVC config & metadata files
+!.dvc/config
+!.dvc/plots/
+
 # DVC files for pipeline tracking
 *.dvc
 
