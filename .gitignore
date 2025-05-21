@@ -6,3 +6,10 @@ data/processed/
 /.dvc/
 !.dvc
 *.dvc
+# DVC: ignore only cache and temp, but track the .dvc metadata directory
+.dvc/cache/
+.dvc/tmp/
+
+# Ensure DVC metadata files are tracked
+!.dvc/config
+!.dvc/.gitignore
