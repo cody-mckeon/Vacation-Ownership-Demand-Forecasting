@@ -7,3 +7,5 @@ dvc
 fastapi
 uvicorn
 pytest
+kagglehub
+dvc-gdrive
