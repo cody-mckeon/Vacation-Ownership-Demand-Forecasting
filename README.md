@@ -1,0 +1,9 @@
+├── data/                  ← raw & cleaned CSV or SQLite DB
+├── dvc.yaml               ← DVC pipeline definitions
+├── feature_factory/       ← Colab notebooks + scripts
+├── models/                ← training notebooks + MLflow configs
+├── serve/                 ← FastAPI or Streamlit app
+├── .github/               ← CI/CD workflows
+├── docs/                  ← MkDocs / Mermaid diagrams
+├── slides/                ← Google Slides link or export
+└── README.md
