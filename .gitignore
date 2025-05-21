@@ -7,14 +7,4 @@ __pycache__/
 data/raw/
 data/processed/
 
-```
-# Ignore only DVC cache and temp files
-.dvc/cache/
-.dvc/tmp/
-
-# Do not ignore .dvc/ itself so Git can track metadata
-
-# Track DVC pipeline files
-*.dvc
-```
 
