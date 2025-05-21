@@ -1,23 +1,18 @@
-# Python artifacts
+# Ignore Python artifacts
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-# Data directories
+# Ignore raw and processed data directories (managed by DVC)
 data/raw/
 data/processed/
 
-# DVC cache and temporary files
+# Ignore only DVC cache and temp files
 .dvc/cache/
 .dvc/tmp/
 
-# Track DVC metadata directory
-!.dvc/
+# Do not ignore .dvc/ itself so Git can track metadata
 
-# Track DVC config & metadata files
-!.dvc/config
-!.dvc/plots/
-
-# DVC files for pipeline tracking
+# Track DVC pipeline files
 *.dvc
 
