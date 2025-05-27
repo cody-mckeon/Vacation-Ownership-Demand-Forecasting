@@ -1,0 +1,5 @@
+outs:
+- md5: ea5aabff424d2bcd08cde64b315412c6
+  size: 687677
+  hash: md5
+  path: features_model.parquet
