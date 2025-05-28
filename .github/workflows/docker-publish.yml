@@ -1,5 +1,10 @@
 name: Build & Publish Docker Image
 
+# Make sure the token can write packages
+permissions:
+  contents: read        # leave checkout working
+  packages: write       # allow pushing to GHCR
+
 on:
   push:
     branches: [ main ]
