@@ -12,3 +12,4 @@ dvc-gdrive
 dvc[gdrive]
 optuna
 shap
+evidently
