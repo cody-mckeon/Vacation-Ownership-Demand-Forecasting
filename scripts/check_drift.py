@@ -17,6 +17,14 @@ def main():
     df_base = pd.read_parquet(args.baseline)
     df_curr = pd.read_parquet(args.current)
 
+    # Drop columns that are all -null in baseline or current
+    common_cols = [
+        col for col in df_base.columns
+        if df_base[col].notna().any() and df_curr[col].notna().any()
+    ]
+    df_base = df_base[common_cols]
+    df_curr = df_curr[common_cols]
+
     # 2. Build & run an Evidently Report
     report = Report(metrics=[DataDriftPreset()])
     report.run(reference_data=df_base, current_data=df_curr)
