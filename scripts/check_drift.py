@@ -19,7 +19,7 @@ def main():
 
     # 2. Build & run an Evidently Report
     report = Report(metrics=[DataDriftPreset()])
-    report.run(baseline_data=df_base, current_data=df_curr)
+    report.run(reference_data=df_base, current_data=df_curr)
 
     # 3. Save an HTML report for review
     report.save_html(args.report)
