@@ -9,3 +9,6 @@ uvicorn
 pytest
 kagglehub
 dvc-gdrive
+dvc[gdrive]
+optuna
+shap
