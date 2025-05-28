@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import argparse
 import pandas as pd
-from evidently.report import Report
+from evidently import Report
 from evidently.metric_preset import DataDriftPreset
 
 def main():
