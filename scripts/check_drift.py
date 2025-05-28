@@ -2,7 +2,7 @@
 import argparse
 import pandas as pd
 from evidently import Report
-from evidently.metric_preset import DataDriftPreset
+from evidently.metrics import DataDriftPreset
 
 def main():
     p = argparse.ArgumentParser()
