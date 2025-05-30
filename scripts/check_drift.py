@@ -47,7 +47,7 @@ def main():
     result.save_html(args.report)
 
     # 4. Inspect the drift scores and exit non-zero if any exceed threshold
-    rd = report.as_dict()
+    rd = result.as_dict()
     drift_info = rd['metrics'][0]['result']['metrics']  # DataDriftPreset section
     drifted = []
     for feat in drift_info:
