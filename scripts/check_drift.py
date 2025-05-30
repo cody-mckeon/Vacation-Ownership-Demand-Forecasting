@@ -44,7 +44,7 @@ def main():
         exit(0)
 
     # 3. Save an HTML report for review
-    report.save_html(args.report)
+    result.save_html(args.report)
 
     # 4. Inspect the drift scores and exit non-zero if any exceed threshold
     rd = report.as_dict()
