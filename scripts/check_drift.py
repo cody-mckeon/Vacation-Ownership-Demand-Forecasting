@@ -23,12 +23,6 @@ def main():
             df_base = df_base.drop(columns=col)
             df_curr = df_curr.drop(columns=col)
 
-    # Drop columns that are all -null in baseline or current
-    common_cols = [
-        col for col in df_base.columns
-        if df_base[col].notna().any() and df_curr[col].notna().any()
-    ]
-
     # 3. Filter out columns that are all-null in either slice
     common_cols = [
         col for col in df_base.columns
@@ -44,7 +38,7 @@ def main():
     # 2. Build & run an Evidently Report
     report = Report(metrics=[DataDriftPreset()])
     try:
-        report.run(reference_data=df_base, current_data=df_curr)
+        result = report.run(reference_data=df_base, current_data=df_curr)
     except ZeroDivisionError:
         print("⚠️ No features to evaluate for drift. Exiting.")
         exit(0)
